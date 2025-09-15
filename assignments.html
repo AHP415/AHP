@@ -14,5 +14,134 @@
         <a href="contact.html">Contact</a>
     </nav>
     <p>This is my assignments page.</p>
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <!-- https://www.w3schools.com/howto/howto_js_slideshow.asp -->
+
+    <style>
+      body {
+        font-family: "Helvetica Neue", Helvetica, sans-serif;
+        margin: 10px;
+        font-size: 1.5em;
+        line-height: 2em;
+      }
+      
+      p { padding: 5em; }
+      
+      .mySlides {
+        display: none;
+      }
+      img {
+        vertical-align: middle;
+      }
+
+      /* Slideshow container */
+      .slideshow-container {
+        width: 90%; /*play with scale to alter layout*/
+        margin: auto; /*centers the content*/
+        /* try playing with placement:
+        float: left;
+        float: right;
+        */
+      }
+
+      /* Fading animation */
+      .fade {
+        animation-name: fade;
+        animation-duration: 1.5s;
+      }
+
+      @keyframes fade {
+        from {
+          opacity: 0.4;
+        }
+        to {
+          opacity: 1;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="slideshow-container">
+      <div class="mySlides fade">
+        <img src="IMG_Guy6841.png" style="width:100%" />
+      </div>
+
+      <div class="mySlides fade">
+        <img src="IMG_Speakers7016.png" style="width:100%" />
+      </div>
+
+      <div class="mySlides fade">
+        <img src="IMG_Dancer7029.png" style="width:100%" />
+      </div>
+
+      <div class="mySlides fade">
+        <img src="IMG_FifthAve7199.png" style="width:100%" />
+      </div>
+
+      <div class="mySlides fade">
+        <img src="IMG_Delivery7155.png" style="width:100%" />
+      </div>
+
+      <div class="mySlides fade">
+        <img src="IMG_Pika7053.png" style="width:100%" />
+      </div>
+
+      <div class="mySlides fade">
+        <img src="IMG_Pikachu7055.png" style="width:100%" />
+      </div>
+
+      <div class="mySlides fade">
+        <img src="IMG_Trump7174.png" style="width:100%" />
+      </div>
+
+      <div class="mySlides fade">
+        <img src="IMG_Sandia6944.png" style="width:100%" />
+      </div>
+
+      <div class="mySlides fade">
+        <img src="IMG_Mariachi6851.png" style="width:100%" />
+      </div>
+
+      <div class="mySlides fade">
+        <img src="IMG_Munsee7213.png" style="width:100%" />
+      </div>
+    </div>
+
+    <p>How do we make home a place of belonging? Where art and public space meet I think there is an intersection of grief and joy. Grief for what was lost and joy for the         resilience of existing. These images are a snapshot of 5th avenue in Sunset park on September 14th, 2025 during the Mexican independence day parade. <br> 
+      I belive they represnt a ritual of creating belonging through art in some way.
+    </p>
+
+    <script>
+      // create variable to index the slides - to track the slides
+      var slideIndex = 0;
+      // call a function that does something with the slides
+      showSlides();
+
+      function showSlides() {
+        // a variable to be used in the for loop - i for "index"
+        var i;
+        // target the slides in the DOM as slides
+        var slides = document.getElementsByClassName("mySlides");
+        // loop through the slides showing them one at a time (display)
+        for (i = 0; i < slides.length; i++) {
+          slides[i].style.display = "none"; //none hides the slides
+        }
+        // increment the slides from 0 to the total number of slides (for loop)
+        slideIndex++;
+        // loop back to the beginning
+        if (slideIndex > slides.length) {
+          slideIndex = 1;
+        }
+        slides[slideIndex - 1].style.display = "block"; //show the slide
+        setTimeout(showSlides, 2000); // Change image every 2 seconds
+      }
+    </script>
+
+  </body>
+</html>
+    
 </body>
 </html>
